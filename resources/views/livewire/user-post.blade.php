@@ -1,7 +1,7 @@
 <div>
     @if (count($user->posts) > 0)
+    <div class="flex flex-col  overflow-y-scroll min-h-0 relative no-scrollbar w-full" style=" gap:20px;max-height:600px">
 
-   <div class="flex flex-col overflow-y-scroll min-h-0 relative no-scrollbar w-full" style=" gap:20px;max-height:600px">
     @foreach ($user->posts as $post)
         
     <div class=" mt-5 rounded-lg shadow-lg" style="background-color:#00B8A9">
