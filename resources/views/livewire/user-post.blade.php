@@ -4,10 +4,12 @@
 
     @foreach ($user->posts as $post)
         
-    <div class=" mt-5 rounded-lg shadow-lg" style="background-color:#00B8A9">
-        <div class="m-3 shadow-2xl" style="min-height:100px;max-height:500px;">
-           
+
+            <div class="w-full mt-5 rounded-lg shadow-lg ss:80 " style="background-color:#00B8A9">
+                   <div class="mt-3 mb-3 shadow-2xl" style="min-height:100px;max-height:500px;">
+
             <div class="flex justify-between"><a href="/profile/{{$user->id}}"><h1 class="font-bold pt-1 flex">
+                
                 @if ($post->user->displaypicture != null)
                 <img src="{{URL('storage/'.$post->user->displaypicture)}}" alt="" style="height: 30px;width:30px;border-radius:100%;margin-left:5px; {{$user->active_status == 'Online' ? 'border:2px solid green;' : 'border:2px solid blue;'}}">    
                 @else
